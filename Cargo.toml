@@ -1,9 +1,14 @@
 [package]
 name = "binbox"
+description = "POSIX core utilities written in Rust"
 version = "0.0.1"
-license = "MIT"
+
+authors = ["Johnathan C Maudlin <jcmdln@gmail.com>"]
 edition = "2018"
-authors = ["jcmdln <jcmdln@gmail.com>"]
+keywords = ["POSIX", "utilities", "coreutils", "binutils"]
+license-file = "LICENSE"
+readme = "README.md"
+repository = "https://github.com/jcmdln/binbox"
 
 [[bin]]
 name = "basename"
