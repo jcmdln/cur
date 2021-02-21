@@ -37,7 +37,7 @@ expand into "extracurricular" implementations, one such example being `smtp`.
 | uname     | TODO   | [POSIX.1-2008][uname_posix],
 | who       | TODO   | [POSIX.1-2008][who_posix],
 | whoami    | TODO   | [Extra][whoami_extra],
-| yes       | TODO   | [POSIX.1-2008][yes_posix],
+| yes       | TODO   | [Extra][yes_extra],
 
 
 [basename_posix]:   https://pubs.opengroup.org/onlinepubs/9699919799/utilities/basename.html
@@ -65,3 +65,4 @@ expand into "extracurricular" implementations, one such example being `smtp`.
 [uname_posix]:      https://pubs.opengroup.org/onlinepubs/9699919799/utilities/uname.html
 [who_posix]:        https://pubs.opengroup.org/onlinepubs/9699919799/utilities/who.html
 [whoami_extra]:     https://linux.die.net/man/1/whoami
+[yes_extra]:        https://linux.die.net/man/1/yes
