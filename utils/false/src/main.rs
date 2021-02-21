@@ -1,5 +1,7 @@
 use std::process::exit;
 
+use r#false::r#false;
+
 fn main() {
-    exit(1)
+	exit(r#false());
 }

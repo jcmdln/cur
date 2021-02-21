@@ -1,7 +1,7 @@
 use std::env;
 use std::process::exit;
 
-use basename::basename_cli;
+use binbox::{bb_basename, bb_false, bb_true};
 
 fn main() {
 	let mut args: Vec<String> = env::args().collect();
@@ -12,10 +12,10 @@ fn main() {
 		exit(1);
 	}
 
-	if &args[0] == "basename" {
-		args.drain(0..1);
-		exit(basename_cli(args));
+	match args[0].as_str() {
+		"basename" => bb_basename(args),
+		"false" => bb_false(),
+		"true" => bb_true(),
+		_ => exit(0),
 	}
-
-	exit(0);
 }
