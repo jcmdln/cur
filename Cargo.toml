@@ -1,5 +1,2 @@
 [workspace]
 members = ["utils/*"]
-
-[profile.release]
-lto = true
