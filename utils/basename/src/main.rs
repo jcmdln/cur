@@ -1,25 +1,12 @@
 use std::env;
 use std::process::exit;
 
-use basename::basename;
+use basename::basename_cli;
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
+	let mut args: Vec<String> = env::args().collect();
+	args.drain(0..1);
 
-    if args.len() <= 1 {
-        println!("basename: missing operand");
-        exit(1);
-    }
-
-    let name = &args[1];
-    let suffix: &str;
-
-    if args.len() > 2 {
-        suffix = &args[2]
-    } else {
-        suffix = ""
-    }
-
-    let result = basename(&name, suffix);
-    println!("{}", result)
+	let retval: i32 = basename_cli(args);
+	exit(retval);
 }
