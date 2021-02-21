@@ -1,3 +1,6 @@
+use std::env;
+use std::process::exit;
+
 pub fn basename<'n>(name: &'n str, suffix: &str) -> &'n str {
 	let mut target = name;
 
@@ -14,15 +17,18 @@ pub fn basename<'n>(name: &'n str, suffix: &str) -> &'n str {
 	result.last().unwrap()
 }
 
-pub fn basename_cli(args: Vec<String>) -> i32 {
+fn main() {
+	let mut args: Vec<String> = env::args().collect();
+	args.drain(0..1);
+
 	if args.len() < 1 {
 		println!("basename: error: missing operand");
-		return 1;
+		exit(1);
 	}
 
 	if args.len() > 2 {
 		println!("basename: error: extra operands");
-		return 1;
+		exit(1);
 	}
 
 	let name = &args[0];
@@ -35,5 +41,5 @@ pub fn basename_cli(args: Vec<String>) -> i32 {
 	}
 
 	println!("{}", basename(&name, suffix));
-	return 0;
+	exit(0);
 }

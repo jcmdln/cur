@@ -1,2 +1,22 @@
-[workspace]
-members = ["utils/*"]
+[package]
+name = "binbox"
+version = "0.0.1"
+license = "MIT"
+edition = "2018"
+authors = ["jcmdln <jcmdln@gmail.com>"]
+
+[[bin]]
+name = "basename"
+path = "usr.bin/basename/basename.rs"
+
+[[bin]]
+name = "false"
+path = "usr.bin/false/false.rs"
+
+# [[bin]]
+# name = "sleep"
+# path = "bin/sleep/sleep.rs"
+
+[[bin]]
+name = "true"
+path = "usr.bin/true/true.rs"

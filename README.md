@@ -1,8 +1,6 @@
 `binbox` is an implementation of core utilities written to conform to their
 formal specification, or respective manual page(s) if no such specification
-exists. The design is such that we can build, run, and import individual
-utilities or build the `binbox` crate which creates a multi-call binary
-including all utilities.
+exists.
 
 
 Utilities
