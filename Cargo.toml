@@ -12,11 +12,11 @@ repository = "https://github.com/jcmdln/binbox"
 
 [[bin]]
 name = "basename"
-path = "usr.bin/basename/basename.rs"
+path = "bin/basename/basename.rs"
 
 [[bin]]
 name = "false"
-path = "usr.bin/false/false.rs"
+path = "bin/false/false.rs"
 
 # [[bin]]
 # name = "sleep"
@@ -24,4 +24,4 @@ path = "usr.bin/false/false.rs"
 
 [[bin]]
 name = "true"
-path = "usr.bin/true/true.rs"
+path = "bin/true/true.rs"
