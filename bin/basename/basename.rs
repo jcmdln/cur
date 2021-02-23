@@ -1,7 +1,7 @@
 use std::env;
 use std::process::exit;
 
-pub fn basename<'n>(name: &'n str, suffix: &str) -> &'n str {
+fn basename<'n>(name: &'n str, suffix: &str) -> &'n str {
 	let mut target = name;
 
 	if suffix.len() > 0 {
@@ -42,4 +42,22 @@ fn main() {
 
 	println!("{}", basename(&name, suffix));
 	exit(0);
+}
+
+#[test]
+fn test_basename() -> Result<(), String> {
+	assert_eq!(basename("/path/to/dir", ""), "dir");
+	Ok(())
+}
+
+#[test]
+fn test_basename_with_invalid_suffix() -> Result<(), String> {
+	assert_eq!(basename("/path/to/dir", "to"), "dir");
+	Ok(())
+}
+
+#[test]
+fn test_basename_with_valid_suffix() -> Result<(), String> {
+	assert_eq!(basename("/path/to/dir", "r"), "di");
+	Ok(())
 }
