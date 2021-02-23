@@ -10,6 +10,12 @@ license-file = "LICENSE"
 readme = "README.md"
 repository = "https://github.com/jcmdln/binbox"
 
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "z"
+panic = "abort"
+
 [[bin]]
 name = "basename"
 path = "bin/basename/basename.rs"
