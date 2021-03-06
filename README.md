@@ -5,8 +5,8 @@ exists.
 
 Utilities
 ==========
-We should focus on POSIX, LSB, and critical utilties first. Later we will
-expand into "extracurricular" implementations, one such example being `smtp`.
+This list is more of a roadmap than anything, and isn't exhaustive. More
+utilities will certainly be added later.
 
 | Utility   | Status | Specifications |
 | --------- | ------ | -------------- |
@@ -14,6 +14,7 @@ expand into "extracurricular" implementations, one such example being `smtp`.
 | cat       | TODO   | [POSIX.1-2008][cat_posix],
 | chmod     | TODO   | [POSIX.1-2008][chmod_posix],
 | count     | TODO   | [Extra][count_extra],
+| dirname   | DONE   | [POSIX.1-2008][dirname_posix],
 | false     | DONE   | [POSIX.1-2008][false_posix],
 | groups    | TODO   | [LSB v5.0.0][groups_lsb],
 | head      | TODO   | [POSIX.1-2008][head_posix],
@@ -42,6 +43,7 @@ expand into "extracurricular" implementations, one such example being `smtp`.
 [cat_posix]:        https://pubs.opengroup.org/onlinepubs/9699919799/utilities/cat.html
 [chmod_posix]:      https://pubs.opengroup.org/onlinepubs/9699919799/utilities/chmod.html
 [count_extra]:      https://linux.die.net/man/1/count
+[dirname_posix]:    https://pubs.opengroup.org/onlinepubs/9699919799/utilities/dirname.html
 [false_posix]:      https://pubs.opengroup.org/onlinepubs/9699919799/utilities/false.html
 [groups_lsb]:       http://refspecs.linuxfoundation.org/LSB_5.0.0/LSB-Core-generic/LSB-Core-generic/groups.html
 [head_posix]:       https://pubs.opengroup.org/onlinepubs/9699919799/utilities/head.html
