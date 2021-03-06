@@ -5,15 +5,13 @@ fn dirname(name: &str) -> &str {
     let mut result: Vec<&str> =
         name.strip_suffix("/").unwrap_or(name).split("/").collect();
 
-    result.sort();
-    result.dedup();
+    result.retain(|&x| x != "");
 
-    println!("result: '{:?}'", result);
-
-    if result.len() == 1 && result[0] == "" {
+    if result.len() <= 1 || result[0] == "" {
         return "/";
     }
 
+    result.remove(result.len() - 1);
     result.last().unwrap()
 }
 
@@ -39,6 +37,7 @@ fn main() {
 #[test]
 fn returns_parent_directory() -> Result<(), String> {
     assert_eq!(dirname("/path/to/dir"), "to");
+    assert_eq!(dirname("/wew/lad/foo/bar"), "foo");
     Ok(())
 }
 
