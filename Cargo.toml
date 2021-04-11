@@ -1,5 +1,3 @@
-#cargo-features = ["strip"]  # Not in stable yet
-
 [package]
 name = "binbox"
 description = "POSIX core utilities written in Rust"
@@ -14,4 +12,7 @@ repository = "https://github.com/jcmdln/binbox"
 
 [profile.release]
 lto = true
-#strip = true  # Not in stable yet
+
+# https://github.com/rust-lang/rust/issues/72110
+# panic = "abort"
+# strip = true
