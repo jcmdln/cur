@@ -13,7 +13,7 @@ utilities will certainly be added later.
 | basename  | DONE   | [POSIX.1-2008][basename_posix],
 | cat       | TODO   | [POSIX.1-2008][cat_posix],
 | chmod     | TODO   | [POSIX.1-2008][chmod_posix],
-| count     | TODO   | [Extra][count_extra],
+| count     | DONE   | [Extra][count_extra],
 | dirname   | DONE   | [POSIX.1-2008][dirname_posix],
 | false     | DONE   | [POSIX.1-2008][false_posix],
 | groups    | TODO   | [LSB v5.0.0][groups_lsb],
