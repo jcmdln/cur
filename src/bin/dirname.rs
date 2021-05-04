@@ -2,6 +2,13 @@ use std::env;
 use std::process::exit;
 
 fn dirname(name: &str) -> &str {
+    if name.len() <= 1 {
+        if name == "" {
+            return ".";
+        }
+        return name;
+    }
+
     let mut result: Vec<&str> =
         name.strip_suffix("/").unwrap_or(name).split("/").collect();
 
@@ -17,6 +24,7 @@ fn dirname(name: &str) -> &str {
 
 fn main() {
     let mut args: Vec<String> = env::args().collect();
+
     args.drain(0..1);
 
     if args.len() < 1 {
@@ -32,6 +40,12 @@ fn main() {
     let name = &args[0];
     println!("{}", dirname(&name));
     exit(0);
+}
+
+#[test]
+fn empty_string_returns_cwd() -> Result<(), String> {
+    assert_eq!(dirname(""), ".");
+    Ok(())
 }
 
 #[test]
